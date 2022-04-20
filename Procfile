@@ -1,1 +1,1 @@
-{\rtf1}
+bot: python main.py
