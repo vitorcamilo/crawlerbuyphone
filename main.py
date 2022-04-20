@@ -9,10 +9,10 @@ from webdriver_manager.firefox import GeckoDriverManager
 import os
 import requests
 import json
+import schedule
 
 
 class webcrawl():
-
 
     def __init__(self):
         Opptions = Options()
@@ -24,41 +24,40 @@ class webcrawl():
 
 
     def iniciarcrawler(self):
-        while True:
-            sendtelegram = 'Lá vamos nós novamente.... Crawler iniciado!'
-            self.telegramresponse(sendtelegram)
-            iphones = self.apirequest()
-            dados = iphones["data"]
-            if dados :
-                for dado in dados:
-                    try:
-                        idiphone = dado['id']
-                        coriphone = dado['color']
-                        # skumagalu = dado['magalu_sku']
-                        casasbahiasku = dado['casasbahia_sku']
-                        americanassku = dado['americanas_sku']
-                        # precomagalu = self.magalu(skumagalu, coriphone)
-                        if casasbahiasku == None or americanassku == None:
-                            pass
-                        else:
-                            precoamericanas = self.americanas(americanassku)
-                            precocasasbahia = self.casasbahia(casasbahiasku)
-                            urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
-                            urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
-                            self.pricereturn(urlamericanas)
-                            self.pricereturn(urlcasasbahia)
-                            
+        sendtelegram = 'Lá vamos nós novamente.... Crawler iniciado!'
+        self.telegramresponse(sendtelegram)
+        iphones = self.apirequest()
+        dados = iphones["data"]
+        if dados :
+            for dado in dados:
+                try:
+                    idiphone = dado['id']
+                    coriphone = dado['color']
+                    # skumagalu = dado['magalu_sku']
+                    casasbahiasku = dado['casasbahia_sku']
+                    americanassku = dado['americanas_sku']
+                    # precomagalu = self.magalu(skumagalu, coriphone)
+                    if casasbahiasku == None or americanassku == None:
+                        pass
+                    else:
+                        precoamericanas = self.americanas(americanassku)
+                        precocasasbahia = self.casasbahia(casasbahiasku)
+                        urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
+                        urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
+                        self.pricereturn(urlamericanas)
+                        self.pricereturn(urlcasasbahia)
+                        
 
-                        if idiphone == 73:
-                            sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
-                            self.telegramresponse(sendtelegram)
-                            time.sleep(86400)
-                            
-
-                    except Exception as e:
-                        print(e)
-                        sendtelegram = 'O Crawler encontrou um problema! Hora de olhar o que está acontecendo....'
+                    if idiphone == 73:
+                        sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
                         self.telegramresponse(sendtelegram)
+                        
+                        
+
+                except Exception as e:
+                    print(e)
+                    sendtelegram = 'O Crawler encontrou um problema! Hora de olhar o que está acontecendo....'
+                    self.telegramresponse(sendtelegram)
 
 
 
@@ -109,5 +108,9 @@ class webcrawl():
         url = f'''https://api.telegram.org/bot5098238913:AAHvT080O9ifLyIdB5ICE_MoE16nsAcEoNE/sendMessage?chat_id=-574442548&text={text}'''
         requests.get(url)
 
-crawl = webcrawl()
-crawl.iniciarcrawler()
+if __name__ == "__main__":
+    crawl= webcrawl()
+    schedule.every(24).hours.at("00:00").do(crawl.iniciarcrawler)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)

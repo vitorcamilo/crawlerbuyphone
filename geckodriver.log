@@ -1,0 +1,36 @@
+1650463597732	geckodriver	INFO	Listening on 127.0.0.1:51561
+1650463600731	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "51562" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileJN29FH"
+*** You are running in headless mode.
+1650463601657	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileJN29FH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51562/devtools/browser/f1ac1429-51af-4493-9136-b8e6962281d1
+1650463603896	Marionette	INFO	Listening on port 51585
+Read port: 51585
+1650463604027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/gw3SRTxcM/m/5/60sazFxvt49tjUac/EuizXkShzO/ChhnPnsWAg/eBxEI/mYCKW8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LJGn0i2Pg8yG-wzimFR5htSsDE5oolsrGkll4HQxngw.js line 1 > eval line 5606 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1650463797991	geckodriver	INFO	Listening on 127.0.0.1:51848
+1650463800997	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "51849" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofilevGtIoC"
+*** You are running in headless mode.
+1650463801592	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofilevGtIoC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51849/devtools/browser/99dd2d9b-440d-411d-b1fb-a791c55fb041
+1650463803577	Marionette	INFO	Listening on port 51871
+Read port: 51871
+1650463803675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/gw3SRTxcM/m/5/60sazFxvt49tjUac/EuizXkShzO/ChhnPnsWAg/eBxEI/mYCKW8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LJGn0i2Pg8yG-wzimFR5htSsDE5oolsrGkll4HQxngw.js line 1 > eval line 7617 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1650463898415	geckodriver	INFO	Listening on 127.0.0.1:52082
+1650463901426	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "52083" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileRg00el"
+*** You are running in headless mode.
+1650463902062	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileRg00el\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52083/devtools/browser/7daad1cd-bcdf-49e9-8a87-84477c31448b
+1650463904098	Marionette	INFO	Listening on port 52106
+Read port: 52106
+1650463904206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
