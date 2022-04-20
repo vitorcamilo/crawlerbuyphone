@@ -17,7 +17,7 @@ class webcrawl():
     def __init__(self):
         Opptions = Options()
         Opptions.headless = True
-        Opptions.binary_location = os.environ.get('GECKODRIVER_BINARY')
+        Opptions.binary_location = os.environ.get('FIREFOX_BIN')
         Opptions.add_argument("--disable-dev-shm-usage")
         Opptions.add_argument("--no-sandbox")
         self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = Opptions)
