@@ -47,6 +47,8 @@ class webcrawl():
                             urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
                             self.pricereturn(urlamericanas)
                             self.pricereturn(urlcasasbahia)
+                            
+                        self.driver.close()
 
                         if idiphone == 73:
                             sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
@@ -70,7 +72,7 @@ class webcrawl():
     #             return iphone.text
 
     def americanas(self, SKU):
-        self.driver.get(f'''https://api.scrapingant.com/v1/general?url=https://www.americanas.com.br/busca/{SKU}''')
+        self.driver.get(f'''https://www.americanas.com.br/busca/{SKU}''')
         americanas0=self.driver.find_element(By.XPATH, value="//span[contains(@class,'src__Text-sc-154pg0p-0 price__PromotionalPrice-sc-h6xgft-1')]")
         americanas1 = americanas0.text
         americanas2 = americanas1.replace("R$","")
@@ -80,7 +82,7 @@ class webcrawl():
         return americanasfinal
 
     def casasbahia(self, SKU):
-        self.driver.get(f'''https://api.scrapingant.com/v1/general?url=https://www.casasbahia.com.br/{SKU}/b''')
+        self.driver.get(f'''https://www.casasbahia.com.br/{SKU}/b''')
         cb0 = self.driver.find_element(By.XPATH, value="//span[@class='ProductPrice__PriceValue-sc-1tzw2we-6 kBYiGY']")
         cb1 = cb0.text
         cb2 = cb1.replace("R$","")
