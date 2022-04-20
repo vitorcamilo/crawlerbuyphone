@@ -48,7 +48,6 @@ class webcrawl():
                             self.pricereturn(urlamericanas)
                             self.pricereturn(urlcasasbahia)
                             
-                        self.driver.close()
 
                         if idiphone == 73:
                             sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
