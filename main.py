@@ -31,22 +31,42 @@ class webcrawl():
         if dados :
             for dado in dados:
                 try:
+                    nameiphone = dado['name']
+                    memoryiphone = dado['memory']
                     idiphone = dado['id']
                     coriphone = dado['color']
                     # skumagalu = dado['magalu_sku']
                     casasbahiasku = dado['casasbahia_sku']
                     americanassku = dado['americanas_sku']
-                    # precomagalu = self.magalu(skumagalu, coriphone)
-                    if casasbahiasku == None or americanassku == None:
-                        pass
+                    ptofriosku = dado['ponto_sku']
+
+                    if casasbahiasku == None:
+                        vaziocb = True
                     else:
-                        precoamericanas = self.americanas(americanassku)
-                        precocasasbahia = self.casasbahia(casasbahiasku)
-                        urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
-                        urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
-                        self.pricereturn(urlamericanas)
-                        self.pricereturn(urlcasasbahia)
+                        vaziocb = False
+                    if americanassku == None:
+                        vazioamericanas = True
+                    else:
+                        vazioamericanas = False
+                    if ptofriosku == None:
+                        vazioptofrio = True
+                    else:
+                        vazioptofrio= False
+
+                    # precomagalu = self.magalu(skumagalu, coriphone)
+                    precoamericanas = self.americanas(americanassku, vazioamericanas)
+                    precocasasbahia = self.casasbahia(casasbahiasku, vaziocb)
+                    precopontofrio = self.pontofrio(ptofriosku, vazioptofrio)
+                    urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
+                    urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
+                    urlpontofrio = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/ponto/{precopontofrio}'''
+                    self.pricereturn(urlamericanas)
+                    self.pricereturn(urlcasasbahia)
+                    self.pricereturn(urlpontofrio)
                         
+                    if vaziocb == True and vazioptofrio == True and vazioamericanas == True:
+                        sendtelegram = f'''O produto {nameiphone} {coriphone} {memoryiphone}, não foi encontrado em nenhuma loja pelo crawler :('''
+                        self.telegramresponse(sendtelegram)
 
                     if idiphone == 73:
                         sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
@@ -69,25 +89,44 @@ class webcrawl():
     #         if color in iphone.text:
     #             return iphone.text
 
-    def americanas(self, SKU):
-        self.driver.get(f'''https://www.americanas.com.br/busca/{SKU}''')
-        americanas0=self.driver.find_element(By.XPATH, value="//span[contains(@class,'src__Text-sc-154pg0p-0 price__PromotionalPrice-sc-h6xgft-1')]")
-        americanas1 = americanas0.text
-        americanas2 = americanas1.replace("R$","")
-        americanas3 = americanas2.replace(",","")
-        americanasfinal = americanas3.replace(".","")
+    def americanas(self, SKU, vazio):
+        if vazio == True:
+            americanasfinal=0
+        else:
+            self.driver.get(f'''https://www.americanas.com.br/busca/{SKU}''')
+            americanas0=self.driver.find_element(By.XPATH, value="//span[contains(@class,'src__Text-sc-154pg0p-0 price__PromotionalPrice-sc-h6xgft-1')]")
+            americanas1 = americanas0.text
+            americanas2 = americanas1.replace("R$","")
+            americanas3 = americanas2.replace(",","")
+            americanasfinal = americanas3.replace(".","")
         #print(magalufinalprice)
         return americanasfinal
 
-    def casasbahia(self, SKU):
-        self.driver.get(f'''https://www.casasbahia.com.br/{SKU}/b''')
-        cb0 = self.driver.find_element(By.XPATH, value="//span[@class='ProductPrice__PriceValue-sc-1tzw2we-6 kBYiGY']")
-        cb1 = cb0.text
-        cb2 = cb1.replace("R$","")
-        cb3 = cb2.replace(",","")
-        cbfinalprice = cb3.replace(".","")
-        #print(cbfinalprice)
+    def casasbahia(self, SKU, vazio):
+        if vazio == True:
+            cbfinalprice = 0
+        else:
+            self.driver.get(f'''https://www.casasbahia.com.br/{SKU}/b''')
+            cb0 = self.driver.find_element(By.XPATH, value="//span[@class='ProductPrice__PriceValue-sc-1tzw2we-6 kBYiGY']")
+            cb1 = cb0.text
+            cb2 = cb1.replace("R$","")
+            cb3 = cb2.replace(",","")
+            cbfinalprice = cb3.replace(".","")
+            #print(cbfinalprice)
         return cbfinalprice
+
+    def pontofrio(self, SKU, vazio):
+        if vazio == True:
+            PTfriofinalprice = 0
+        else:
+            self.driver.get(f'''https://www.pontofrio.com.br/{SKU}/b''')
+            PTfrio0 = self.driver.find_element(By.XPATH, value="//span[@class='ProductPrice__PriceValue-sc-1tzw2we-6 kBYiGY']")
+            PTfrio1 = PTfrio0.text
+            PTfrio2 = PTfrio1.replace("R$","")
+            PTfrio3 = PTfrio2.replace(",","")
+            PTfriofinalprice = PTfrio3.replace(".","")
+            #print(PTfriofinalprice)
+        return PTfriofinalprice
 
 
     def apirequest(self):
