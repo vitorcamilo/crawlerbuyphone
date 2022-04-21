@@ -67,6 +67,7 @@ class webcrawl():
                     if vaziocb == True and vazioptofrio == True and vazioamericanas == True:
                         sendtelegram = f'''O produto {nameiphone} {coriphone} {memoryiphone}, não foi encontrado em nenhuma loja pelo crawler :('''
                         self.telegramresponse(sendtelegram)
+                        time.sleep(2)
 
                     if idiphone == 73:
                         sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
@@ -149,7 +150,7 @@ class webcrawl():
 
 if __name__ == "__main__":
     crawl= webcrawl()
-    schedule.every(24).hours.at("00:00").do(crawl.iniciarcrawler)
+    schedule.every().day.at("00:00").do(crawl.iniciarcrawler)
     while True:
         schedule.run_pending()
         time.sleep(1)

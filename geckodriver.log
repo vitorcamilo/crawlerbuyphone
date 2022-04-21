@@ -34,3 +34,36 @@ DevTools listening on ws://localhost:52083/devtools/browser/7daad1cd-bcdf-49e9-8
 1650463904098	Marionette	INFO	Listening on port 52106
 Read port: 52106
 1650463904206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1650510290872	geckodriver	INFO	Listening on 127.0.0.1:63993
+1650510293963	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "63994" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileAQUBxU"
+*** You are running in headless mode.
+1650510294744	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofileAQUBxU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63994/devtools/browser/08ef1677-8fb6-4030-8464-dbf965e91fde
+1650510297023	Marionette	INFO	Listening on port 64020
+Read port: 64020
+1650510297077	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1650510411743	geckodriver	INFO	Listening on 127.0.0.1:64134
+1650510414747	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "64135" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofilep2Veu6"
+*** You are running in headless mode.
+1650510415419	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofilep2Veu6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64135/devtools/browser/510d2dda-1546-4f45-9c3e-2f722fb19d83
+1650510417625	Marionette	INFO	Listening on port 64162
+Read port: 64162
+1650510417727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1650510438153	geckodriver	INFO	Listening on 127.0.0.1:64199
+1650510441173	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "64200" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofiles0wCtK"
+*** You are running in headless mode.
+1650510441784	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\GIOPC~1\\AppData\\Local\\Temp\\rust_mozprofiles0wCtK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64200/devtools/browser/cb09a9c9-88d3-40a4-9562-5640abd54b2d
+1650510443702	Marionette	INFO	Listening on port 64222
+Read port: 64222
+1650510443857	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/uOarTGj1I9SjIZAl2Q/iat3bkJX/SWMRIi4B/CFwh/LS1hDXo, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LJGn0i2Pg8yG-wzimFR5htSsDE5oolsrGkll4HQxngw.js line 1 > eval line 2063 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
