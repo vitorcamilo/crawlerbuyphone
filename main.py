@@ -15,12 +15,26 @@ import schedule
 class webcrawl():
 
     def __init__(self):
-        Opptions = Options()
-        Opptions.headless = True
-        Opptions.binary_location = os.environ.get('FIREFOX_BIN')
-        Opptions.add_argument("--disable-dev-shm-usage")
-        Opptions.add_argument("--no-sandbox")
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = Opptions)
+        self.Opptions = Options()
+        self.Opptions.headless = False
+        self.Opptions.binary_location = os.environ.get('FIREFOX_BIN')
+        self.Opptions.add_argument("--disable-dev-shm-usage")
+        self.Opptions.add_argument("--no-sandbox")
+        self.Opptions.proxy = self.getproxy()
+        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
+
+    def getproxy (self):
+        #self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
+        #self.driver.get("https://free-proxy-list.net/")
+        #proxies = self.driver.find_element(By.XPATH, value = "//table[contains(@class,'table table-striped')]/tbody[1]/tr[1]/td[1]")
+        myProxy = "154.73.159.53"
+        proxy = Proxy({
+            'proxyType': ProxyType.MANUAL,
+            'httpProxy': myProxy,
+            'sslProxy': myProxy,
+            })
+        #self.driver.close()
+        return proxy
 
 
     def iniciarcrawler(self):
@@ -64,16 +78,7 @@ class webcrawl():
                     self.pricereturn(urlcasasbahia)
                     self.pricereturn(urlpontofrio)
                         
-                    if vaziocb == True and vazioptofrio == True and vazioamericanas == True:
-                        sendtelegram = f'''O produto {nameiphone} {coriphone} {memoryiphone}, não foi encontrado em nenhuma loja pelo crawler :('''
-                        self.telegramresponse(sendtelegram)
-                        time.sleep(2)
 
-                    if idiphone == 73:
-                        sendtelegram = 'Phewwww... finalmente! O Crawler terminou seu trabalho por hoje!'
-                        self.telegramresponse(sendtelegram)
-                        
-                        
 
                 except Exception as e:
                     print(e)
@@ -150,7 +155,7 @@ class webcrawl():
 
 if __name__ == "__main__":
     crawl= webcrawl()
-    schedule.every().day.at("00:00").do(crawl.iniciarcrawler)
+    schedule.every().day.at("18:38").do(crawl.iniciarcrawler)
     while True:
         schedule.run_pending()
         time.sleep(1)
