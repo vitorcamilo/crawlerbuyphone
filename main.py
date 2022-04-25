@@ -21,24 +21,14 @@ class webcrawl():
         self.Opptions.binary_location = os.environ.get('FIREFOX_BIN')
         self.Opptions.add_argument("--disable-dev-shm-usage")
         self.Opptions.add_argument("--no-sandbox")
-        #self.Opptions.proxy = self.getproxy()
+        self.Opptions.set_preference("general.useragent.override", "New user agent")
         self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
 
-    # def getproxy (self):
-    #     #self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
-    #     #self.driver.get("https://free-proxy-list.net/")
-    #     #proxies = self.driver.find_element(By.XPATH, value = "//table[contains(@class,'table table-striped')]/tbody[1]/tr[1]/td[1]")
-    #     myProxy = "154.73.159.53"
-    #     proxy = Proxy({
-    #         'proxyType': ProxyType.MANUAL,
-    #         'httpProxy': myProxy,
-    #         'sslProxy': myProxy,
-    #         })
-    #     #self.driver.close()
-    #     return proxy
-
-
+  
     def iniciarcrawler(self):
+        self.driver.get("https://www.google.com/search?q=whats+my+ip")
+        ip = self.driver.find_element(By.XPATH,value="//div[contains(@class,'NEM4H VL3Jfb')]//span)[2]")
+        print(ip.text)
         sendtelegram = 'Lá vamos nós novamente.... Crawler iniciado!'
         self.telegramresponse(sendtelegram)
         iphones = self.apirequest()
@@ -81,7 +71,7 @@ class webcrawl():
                     self.pricereturn(urlamericanas)
                     self.pricereturn(urlcasasbahia)
                     self.pricereturn(urlpontofrio)
-                        
+                    self.driver.quit()
 
 
                 except Exception as e:
@@ -156,13 +146,15 @@ class webcrawl():
     def telegramresponse(self, text):
         url = f'''https://api.telegram.org/bot5098238913:AAHvT080O9ifLyIdB5ICE_MoE16nsAcEoNE/sendMessage?chat_id=-574442548&text={text}'''
         requests.get(url)
-        
+    
+    
 crawl = webcrawl()
 crawl.iniciarcrawler()
 
+
 # if __name__ == "__main__":
 #     crawl= webcrawl()
-#     schedule.every().day.at("10:33").do(crawl.iniciarcrawler)
+#     schedule.every().day.at("03:00").do(crawl.iniciarcrawler)
 #     while True:
 #         schedule.run_pending()
 #         time.sleep(1)

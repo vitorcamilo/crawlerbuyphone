@@ -334,3 +334,33 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GBy
 JavaScript warning: https://www.pontofrio.com.br/1lynwA/Zh5qf/vYyA_/Hw/p3t7GGSm/NA9f/GCw9Aj/FwciE, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.pontofrio.com.br/akam-sw.js for scope https://www.pontofrio.com.br/ encountered an error during installation.
 JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 2338 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1650895970588	geckodriver	INFO	Listening on 127.0.0.1:58874
+1650895973596	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "58875" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofiletDN8CI"
+*** You are running in headless mode.
+1650895974426	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofiletDN8CI\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+DevTools listening on ws://localhost:58875/devtools/browser/2e04bfb8-83f8-4899-ad2c-b01530318995
+1650895976385	Marionette	INFO	Listening on port 58897
+Read port: 58897
+1650895976454	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/9pLxvJ4mr6kK5iLuQw/EkfO8hXNJ9/DA9yAQ/LG9O/VlgKFR8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 2252 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.pontofrio.com.br/1lynwA/Zh5qf/vYyA_/Hw/p3t7GGSm/NA9f/GCw9Aj/FwciE, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 3050 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 7622 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 2107 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 773 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1650898804381	geckodriver	INFO	Listening on 127.0.0.1:53867
+1650898811668	geckodriver	INFO	Listening on 127.0.0.1:53881
+1650898814727	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "53882" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileQ38jRI"
+*** You are running in headless mode.
+1650898815802	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileQ38jRI\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+DevTools listening on ws://localhost:53882/devtools/browser/feb30e5a-40b0-4b4b-981c-554cba61b0e2
+1650898817744	Marionette	INFO	Listening on port 53906
+Read port: 53906
+1650898817822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
