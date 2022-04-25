@@ -27,7 +27,7 @@ class webcrawl():
   
     def iniciarcrawler(self):
         self.driver.get("https://www.google.com/search?q=whats+my+ip")
-        ip = self.driver.find_element(By.XPATH,value="//div[contains(@class,'NEM4H VL3Jfb')]//span)[2]")
+        ip = self.driver.find_element(By.XPATH,value="/html/body")
         print(ip.text)
         sendtelegram = 'Lá vamos nós novamente.... Crawler iniciado!'
         self.telegramresponse(sendtelegram)
