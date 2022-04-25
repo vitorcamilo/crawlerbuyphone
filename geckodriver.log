@@ -275,3 +275,62 @@ JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1650893216633	geckodriver	INFO	Listening on 127.0.0.1:62501
+1650893470566	geckodriver	INFO	Listening on 127.0.0.1:62715
+1650893473568	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "62716" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileBFtzjD"
+*** You are running in headless mode.
+1650893474482	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileBFtzjD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62716/devtools/browser/d5a5f696-818a-4fde-b0a4-ce61ea1e8ee7
+1650893476769	Marionette	INFO	Listening on port 62742
+Read port: 62742
+1650893477213	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1650893567582	geckodriver	INFO	Listening on 127.0.0.1:62819
+1650893570591	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "62820" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilerok4Vn"
+*** You are running in headless mode.
+1650893571467	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilerok4Vn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62820/devtools/browser/ae49eabb-1f66-4b48-9374-8a7dd1a1a22f
+1650893573808	Marionette	INFO	Listening on port 62842
+Read port: 62842
+1650893573879	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/9pLxvJ4mr6kK5iLuQw/EkfO8hXNJ9/DA9yAQ/LG9O/VlgKFR8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://www.pontofrio.com.br/1lynwA/Zh5qf/vYyA_/Hw/p3t7GGSm/NA9f/GCw9Aj/FwciE, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.pontofrio.com.br/akam-sw.js for scope https://www.pontofrio.com.br/ encountered an error during installation.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 672 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1650893852195	geckodriver	INFO	Listening on 127.0.0.1:54482
+1650893855195	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "54483" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile06fCxy"
+1650893856730	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile06fCxy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54483/devtools/browser/e38be1a3-2e84-4b49-9109-cf1f47a7b543
+1650893861944	Marionette	INFO	Listening on port 54511
+Read port: 54511
+1650893862149	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.casasbahia.com.br/9pLxvJ4mr6kK5iLuQw/EkfO8hXNJ9/DA9yAQ/LG9O/VlgKFR8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://www.pontofrio.com.br/1lynwA/Zh5qf/vYyA_/Hw/p3t7GGSm/NA9f/GCw9Aj/FwciE, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.pontofrio.com.br/akam-sw.js for scope https://www.pontofrio.com.br/ encountered an error during installation.
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1650893899808	Marionette	INFO	Stopped listening on port 54511
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1650894177560	geckodriver	INFO	Listening on 127.0.0.1:56551
+1650894180561	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-dev-shm-usage" "--no-sandbox" "--remote-debugging-port" "56552" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileIlay4F"
+*** You are running in headless mode.
+1650894181337	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileIlay4F\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56552/devtools/browser/0258dd59-1c62-4908-9846-0ab21e01e3d8
+1650894183471	Marionette	INFO	Listening on port 56577
+Read port: 56577
+1650894183594	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.casasbahia.com.br/akam-sw.js for scope https://www.casasbahia.com.br/ encountered an error during installation.
+JavaScript warning: https://www.casasbahia.com.br/9pLxvJ4mr6kK5iLuQw/EkfO8hXNJ9/DA9yAQ/LG9O/VlgKFR8, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 5410 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.pontofrio.com.br/1lynwA/Zh5qf/vYyA_/Hw/p3t7GGSm/NA9f/GCw9Aj/FwciE, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.pontofrio.com.br/akam-sw.js for scope https://www.pontofrio.com.br/ encountered an error during installation.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/LOnNfct_OK6AKwq7GByGz0_K8O7BrCXN6Fs6Py5gnPc.js line 1 > eval line 2338 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.

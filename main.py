@@ -10,31 +10,32 @@ import os
 import requests
 import json
 import schedule
+import random
 
 
 class webcrawl():
 
     def __init__(self):
         self.Opptions = Options()
-        self.Opptions.headless = False
+        self.Opptions.headless = True
         self.Opptions.binary_location = os.environ.get('FIREFOX_BIN')
         self.Opptions.add_argument("--disable-dev-shm-usage")
         self.Opptions.add_argument("--no-sandbox")
-        self.Opptions.proxy = self.getproxy()
+        #self.Opptions.proxy = self.getproxy()
         self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
 
-    def getproxy (self):
-        #self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
-        #self.driver.get("https://free-proxy-list.net/")
-        #proxies = self.driver.find_element(By.XPATH, value = "//table[contains(@class,'table table-striped')]/tbody[1]/tr[1]/td[1]")
-        myProxy = "154.73.159.53"
-        proxy = Proxy({
-            'proxyType': ProxyType.MANUAL,
-            'httpProxy': myProxy,
-            'sslProxy': myProxy,
-            })
-        #self.driver.close()
-        return proxy
+    # def getproxy (self):
+    #     #self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options = self.Opptions)
+    #     #self.driver.get("https://free-proxy-list.net/")
+    #     #proxies = self.driver.find_element(By.XPATH, value = "//table[contains(@class,'table table-striped')]/tbody[1]/tr[1]/td[1]")
+    #     myProxy = "154.73.159.53"
+    #     proxy = Proxy({
+    #         'proxyType': ProxyType.MANUAL,
+    #         'httpProxy': myProxy,
+    #         'sslProxy': myProxy,
+    #         })
+    #     #self.driver.close()
+    #     return proxy
 
 
     def iniciarcrawler(self):
@@ -69,8 +70,11 @@ class webcrawl():
 
                     # precomagalu = self.magalu(skumagalu, coriphone)
                     precoamericanas = self.americanas(americanassku, vazioamericanas)
+                    time.sleep(random.randint(0, 30))
                     precocasasbahia = self.casasbahia(casasbahiasku, vaziocb)
+                    time.sleep(random.randint(0, 30))
                     precopontofrio = self.pontofrio(ptofriosku, vazioptofrio)
+                    time.sleep(random.randint(0, 30))
                     urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
                     urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
                     urlpontofrio = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/ponto/{precopontofrio}'''
@@ -152,10 +156,13 @@ class webcrawl():
     def telegramresponse(self, text):
         url = f'''https://api.telegram.org/bot5098238913:AAHvT080O9ifLyIdB5ICE_MoE16nsAcEoNE/sendMessage?chat_id=-574442548&text={text}'''
         requests.get(url)
+        
+crawl = webcrawl()
+crawl.iniciarcrawler()
 
-if __name__ == "__main__":
-    crawl= webcrawl()
-    schedule.every().day.at("18:38").do(crawl.iniciarcrawler)
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+# if __name__ == "__main__":
+#     crawl= webcrawl()
+#     schedule.every().day.at("10:33").do(crawl.iniciarcrawler)
+#     while True:
+#         schedule.run_pending()
+#         time.sleep(1)
