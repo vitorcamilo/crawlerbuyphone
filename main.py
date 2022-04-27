@@ -66,7 +66,6 @@ class webcrawl():
                             elif l.text == "Casas Bahia":
                                 precocasasbahia = p.text.replace("R$","").replace(",","").replace(".","").replace(" ","")
                             
-                            print(f'''magalu:{precomagalu}{os.linesep}pontofrio:{precopontofrio}{os.linesep}Americanas:{precoamericanas}{os.linesep}Casas bahia:{precocasasbahia}''')
                     
                     urlamericanas = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/americanas/{precoamericanas}'''
                     urlcasasbahia = f'''https://pedidos.buyphone.com.br/api/products/{idiphone}/casasbahia/{precocasasbahia}'''
@@ -109,7 +108,7 @@ class webcrawl():
 
 if __name__ == "__main__":
     crawl= webcrawl()
-    schedule.every().day.at("03:00").do(crawl.iniciarcrawler)
+    schedule.every().day.at("01:27").do(crawl.iniciarcrawler)
     while True:
         schedule.run_pending()
         time.sleep(1)
