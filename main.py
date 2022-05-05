@@ -16,6 +16,7 @@ import random
 class webcrawl():
 
     def __init__(self):
+        #não mexa aqui
         self.Opptions = Options()
         self.Opptions.headless = True
         self.Opptions.binary_location = os.environ.get('FIREFOX_BIN')
@@ -32,6 +33,7 @@ class webcrawl():
         if dados :
             for dado in dados:
                 try:
+                    #infos iphone
                     #nameiphone = dado['name']
                     #memoryiphone = dado['memory']
                     #coriphone = dado['color']
@@ -76,7 +78,7 @@ class webcrawl():
                     self.pricereturn(urlpontofrio)
                     self.pricereturn(urlmagalu)
                     
-                    if idiphone == 87:
+                    if idiphone == 88:
                         sendtelegram = 'Pheeew.... O crawler terminou por hoje!.'
                         self.telegramresponse(sendtelegram)
 
@@ -104,11 +106,14 @@ class webcrawl():
     def telegramresponse(self, text):
         url = f'''https://api.telegram.org/bot5098238913:AAHvT080O9ifLyIdB5ICE_MoE16nsAcEoNE/sendMessage?chat_id=-574442548&text={text}'''
         requests.get(url)
-    
 
-if __name__ == "__main__":
-    crawl= webcrawl()
-    schedule.every().day.at("01:27").do(crawl.iniciarcrawler)
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+crawl= webcrawl()
+crawl.iniciarcrawler()
+
+# script para rodar em um certo horário
+# if __name__ == "__main__":
+#     crawl= webcrawl()
+#     schedule.every().day.at("01:27").do(crawl.iniciarcrawler)
+#     while True:
+#         schedule.run_pending()
+#         time.sleep(1)
